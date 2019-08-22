@@ -3,7 +3,7 @@
         <div class="container d-flex flex-row main-navbar">
             <a class="navbar-brand d-none d-sm-block"  href="/store">
                 <img height="60px" class="moqui-logo moqui-logo1" src="/store/assets/moqui-logo.svg" alt="">
-                <span class="font-italic navbar-title">POP Shop</span>
+                <span class="font-italic navbar-title">MoquiCon</span>
             </a>
             <a class="navbar-brand d-block d-sm-none" href="/store">
                 <span class="font-italic navbar-title">POP Shop</span>
@@ -14,83 +14,48 @@
             </button>
 
             <div class="navbar-collapse collapse">
-                <form id="form-search" class="search-input" action="#">
-                    <input type="text" placeholder="Search..." name="search" id="search" value="${searchParameter!''}">
-                    <button class="search-button" type="submit">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
+
                 <!-- Right aligned nav items -->
                 <ul class="navbar-nav ml-auto">
                     <div class="text-secondary">
-                        <span class="navbar-pop-title">Official POP Merchandise</span>
-                        <span class="text-center navbar-pop-subtitle">Quality 100% Guaranted</span>
+                        <span class="navbar-pop-title">Official MoquiCon 2019</span>
                     </div>
                 </ul>
             </div>
         </div>
         <div id="nav_collapse1" class="container navbar-collapse collapse">
             <ul class="navbar-nav">
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop <i class="fas fa-angle-down icon-down"></i></a>
-                    
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <#list browseRootCategoryInfo.subCategoryList as category>
-                            <a class="dropdown-item item-color" href="/store/category/${category.productCategoryId}">
-                                ${category.categoryName}
-                            </a>
-                        </#list>
-                    </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="/store/tickets">
+                        Tickets
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/store/venue">
+                        Venue
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/store/schedule">
+                        Schedule
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/store/sponsors">
+                        Sponsors
+                    </a>
                 </li>
 
-                <#if storeInfo.categoryByType.PsctPromotions??>
-                    <a class="nav-link" href="/store/category/${storeInfo.categoryByType.PsctPromotions.productCategoryId}">
-                        ${storeInfo.categoryByType.PsctPromotions.categoryName}
+                <li class="nav-item">
+                    <a class="nav-link" href="/store/contact">
+                        Contact
                     </a>
-                </#if>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Customer Service <i class="fas fa-angle-down icon-down"></i>
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item item-color" href="/store/content/help">Help Center</a>
-                        <a class="dropdown-item item-color" href="/store/content/help">Delivery Rates</a>
-                        <a class="dropdown-item item-color" href="/store/content/help#delivery">Delivery Times</a>
-                        <a class="dropdown-item item-color" href="/store/content/help#customer-pick-up">Customer Pick Up</a>
-                        <a class="dropdown-item item-color" href="/store/content/help#how-to-pay">How to pay</a>
-                        <div role="separator" class="dropdown-divider"></div>
-                        <a class="dropdown-item item-color" href="/store/content/about">About POP Shop</a>
-                        <a class="dropdown-item item-color" href="/store/content/contact">Contact Us</a>
-                    </div>
                 </li>
             </ul>
 
             <!-- Right aligned nav items -->
             <ul class="navbar-nav ml-auto">
-                <#if partyDetail??>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="fas fa-user"></i> 
-                            ${partyDetail.firstName} ${partyDetail.lastName} ${partyDetail.organizationName!} <i class="fas fa-angle-down icon-down"></i>
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item item-color" href="/store/d#/account">Account Settings</a>
-                            <a class="dropdown-item item-color" href="/store/d#/orders">My Orders</a>
-                            <div role="separator" class="dropdown-divider"></div>
-                            <form method="get" action="/store/logOut">
-                                <button type="submit" class="dropdown-item item-color">Signout</button>
-                            </form>
-                        </div>
-                    </li>
-                <#else>
-                    <li class="nav-item">
-                        <a href="/store/d#/account/create" class="nav-link">Join Now</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/store/d#/login" class="nav-link"><i class="fas fa-user"></i> Sign In</a>
-                    </li>
-                </#if>
+
 
                  <#assign cartCount = 0>
                     <#if cartInfo.orderItemList??>
