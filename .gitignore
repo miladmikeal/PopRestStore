@@ -1,5 +1,5 @@
 
-screen/store/components/combined.*
+screen/moquicon/components/combined.*
 
 # gradle/build files
 .gradle
