@@ -1,11 +1,11 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="d-flex flex-column moqui-navbar">
         <div class="container d-flex flex-row main-navbar">
-            <a class="navbar-brand d-none d-sm-block"  href="/store">
-                <img height="60px" class="moqui-logo moqui-logo1" src="/store/assets/moqui-logo.svg" alt="">
+            <a class="navbar-brand d-none d-sm-block"  href="/moquicon">
+                <img height="60px" class="moqui-logo moqui-logo1" src="/moquicon/assets/moqui-logo.svg" alt="">
                 <span class="font-italic navbar-title">MoquiCon</span>
             </a>
-            <a class="navbar-brand d-block d-sm-none" href="/store">
+            <a class="navbar-brand d-block d-sm-none" href="/moquicon">
                 <span class="font-italic navbar-title">POP Shop</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_collapse1" 
@@ -26,28 +26,28 @@
         <div id="nav_collapse1" class="container navbar-collapse collapse">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="/store/tickets">
+                    <a class="nav-link" href="/moquicon/tickets">
                         Tickets
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/store/venue">
+                    <a class="nav-link" href="/moquicon/venue">
                         Venue
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/store/schedule">
+                    <a class="nav-link" href="/moquicon/schedule">
                         Schedule
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/store/sponsors">
+                    <a class="nav-link" href="/moquicon/sponsors">
                         Sponsors
                     </a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="/store/contact">
+                    <a class="nav-link" href="/moquicon/contact">
                         Contact
                     </a>
                 </li>
@@ -67,7 +67,7 @@
                     </#if>
                 <li class="nav-item">
                     <#if cartCount gt 0>
-                        <a class="nav-link" href="/store/d#/checkout">
+                        <a class="nav-link" href="/moquicon/d#/checkout">
                     <#else>
                         <a class="nav-link pointer" data-toggle="modal" data-target="#emptyCartModal">
                     </#if>
